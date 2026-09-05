@@ -31,8 +31,8 @@ public record Date(int day, int month, int year) {
                 && day > 31) {
             throw new IllegalArgumentException("Day out of range.");
         }
-    }
 
+    }
 
 // PURPOSE: Return the number of days in the given month.
     /*
