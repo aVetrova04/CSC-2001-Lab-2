@@ -22,4 +22,20 @@ public class DateTest {
                 }
         );
     }
+
+    @Test
+    void TestNegativeYearThrows()
+    {
+        // Setup
+
+        // Run
+
+        // Assert
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> {
+                    new Date(1, 2, -2023);
+                }
+        );
+    }
 }
