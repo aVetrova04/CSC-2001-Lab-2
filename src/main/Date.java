@@ -54,16 +54,20 @@ public record Date(int day, int month, int year) {
 // PURPOSE: Return the date representing the day after the given date.
 
     public static Date tomorrow(Date date) {
-        if (date.day() < daysInMonth(date.month())) {
-            return new Date(date.day() + 1, date.month(), date.year());
-        }
-        if (date.day() == daysInMonth(date.month())) {
-            return new Date(1, date.month() + 1, date.year);
-        }
+
+        // TODO Plus one at the end of the month
+
         if (date.day() == daysInMonth(date.month()) && date.month == 12) {
             return new Date(1, 1, date.year + 1);
         }
-        return null;
 
+        if (date.day() == daysInMonth(date.month())) {
+            return new Date(1, date.month() + 1, date.year);
+        }
+
+
+        return new Date(date.day() + 1, date.month(), date.year());
     }
+
+
 }
