@@ -1,4 +1,4 @@
-import main.Date;
+import Date;
 
 void main(String[] args) {
         Date time1 = new Date(1, 2, 2023);

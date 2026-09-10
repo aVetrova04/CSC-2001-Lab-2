@@ -1,4 +1,4 @@
-package main;
+
 
 public record Date(int day, int month, int year) {
 
@@ -55,8 +55,6 @@ public record Date(int day, int month, int year) {
 
     public static Date tomorrow(Date date) {
 
-        // TODO Plus one at the end of the month
-
         if (date.day() == daysInMonth(date.month()) && date.month == 12) {
             return new Date(1, 1, date.year + 1);
         }
@@ -71,3 +69,9 @@ public record Date(int day, int month, int year) {
 
 
 }
+
+// PURPOSE: Return the amount of days elapsed since January 1st
+
+    public static int dayOfYear(Date today) {
+       return 0;
+    }

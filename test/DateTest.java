@@ -1,8 +1,5 @@
-package test;
-
-import main.Date;
+import Date
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DateTest {
